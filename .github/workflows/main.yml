@@ -27,19 +27,13 @@ run: |
 $duration = 21600
 
 $interval = 300 #Check every 5 minutes (300
-
 seconds)
-
 $endTime = (Get-Date). AddSeconds($duration)
 
 Write-Host "Starting keep-alive loop for 6 hours..."
 
 while ((Get-Date) -It $endTime) {
-
 }
-
 Write-Host "Workflow is still alive at $(Get-Date)"
-
 Start-Sleep -Seconds $interval
-
 Write-Host "Keep-alive completed after 6 hours."
